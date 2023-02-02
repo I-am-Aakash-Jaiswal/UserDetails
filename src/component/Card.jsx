@@ -24,18 +24,18 @@ function Card(props) {
    
   return (
     <div className='card'>
-        <div className="box">hey</div>
+        <div className="box">{companyName}</div>
         <div className="box">
             <div className="heading">Contact</div>
             <div className="subHeading">{name}</div>
         </div>
         <div className="box">
             <div className="heading">City</div>
-            <div className="subHeading">Mumbai</div>
+            <div className="subHeading">{city}</div>
         </div>
         <div className="box">
-            <div className="heading">State</div>
-            <div className="subHeading">Maharastra</div>
+            <div className="heading">Street</div>
+            <div className="subHeading">{street}</div>
         </div>
         <div className="box">
             <button className=' detailsButton'>View Details</button>
