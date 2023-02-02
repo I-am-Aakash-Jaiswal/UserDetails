@@ -26,7 +26,7 @@ function Container() {
   return (
     <div className='container'>   
     {Object.entries(data)?.map((c) =>
-        Object.entries(c)?.map((val) => <SimpleAccordion key = {val[0]} list={val} />)
+        Object.entries(c)?.map((val) => (val[1].name && <SimpleAccordion key = {val[0]} list={val} />))
       )}
     </div>
   )
