@@ -1,11 +1,29 @@
 import React from 'react'
 
-function Description() {
+function Description(props) {
+    try{
+        var city= props.users.address.city;
+        // var companyName= props.users.company.name;
+        var contact= props.users.phone;
+        var street = props.users.address.street;
+        var description=props.users.company.catchPhrase;
+        var name= props.users.name;
+        var website =  props.users.website;
+        var email = props.users.email;
+    
+        var address= props.users.address.suite;
+        var username = props.users.username;
+
+    }
+    catch(err){
+
+    }
+
   return (
     <div className='description'>
         <div className="top">
         <div className="heading descMargin">Description</div>
-                <div className="subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, incidunt suscipit! Nulla incidunt, esse dolorem laudantium sint ullam doloribus odio cupiditate odit enim nemo minima, explicabo non error labore sequi soluta magnam, numquam facilis. Incidunt architecto nobis natus facilis ipsam dicta sint sunt praesentium aperiam? Voluptatem nesciunt quae odit recusandae?</div>
+                <div className="subheading">{description}</div>
         </div>
         <div className="bottom">
             <div className="bLeft">
@@ -14,65 +32,64 @@ function Description() {
                             Contact Person
                     </div>
                     <div className="subheading">
-                        Name
+                        {name}
+                    </div>
+                </div>
+                <div className="pair">
+                    <div className="heading">Website
+                    </div>
+                    <div className="subheading">
+                        {website}
                     </div>
                 </div>
                 <div className="pair">
                     <div className="heading">
-                            Contact Person
+                            Email
                     </div>
                     <div className="subheading">
-                        Name
+                        {email}
                     </div>
                 </div>
                 <div className="pair">
                     <div className="heading">
-                            Contact Person
+                            Phones
                     </div>
                     <div className="subheading">
-                        Name
-                    </div>
-                </div>
-                <div className="pair">
-                    <div className="heading">
-                            Contact Person
-                    </div>
-                    <div className="subheading">
-                        Name
+                        {contact}
                     </div>
                 </div>
             </div>
             <div className="bRight">
             <div className="pair">
                     <div className="heading">
-                            Contact Person
+                            Address
                     </div>
                     <div className="subheading">
-                        Name
+                        {address}
                     </div>
                 </div>
                 <div className="pair">
                     <div className="heading">
-                            Contact Person
+                            City
                     </div>
                     <div className="subheading">
-                        Name
+                        {city}
                     </div>
                 </div>
                 <div className="pair">
                     <div className="heading">
-                            Contact Person
+                            Street
                     </div>
                     <div className="subheading">
-                        Name
+                        {street}
                     </div>
                 </div>
                 <div className="pair">
                     <div className="heading">
-                            Contact Person
+                            Uid
                     </div>
                     <div className="subheading">
-                        Name
+                        {username}
                     </div>
                 </div>
 

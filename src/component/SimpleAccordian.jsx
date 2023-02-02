@@ -22,7 +22,7 @@ export default function SimpleAccordion(props) {
           <Card key = {props.list[0]} users={props.list[1]}/>
         </AccordionSummary>
         <AccordionDetails>
-            <Description/>
+            <Description key = {props.list[0]} users={props.list[1]}/>
         </AccordionDetails>
       </Accordion>
      
