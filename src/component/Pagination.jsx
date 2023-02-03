@@ -37,7 +37,7 @@ const Pagination = ({totalPosts,paginate,activePageNumber}) => {
                 <li onClick={()=>handleDec()} className="symbol">{sym[0]}</li>
                 {pageNumbers.map(number=>(
                     <li key={number}  onClick={()=>handleClick(number)} className="page-item page active-page" id={active[number-1]}>
-                            <a  href='!#' id="page-link">{number}</a>
+                            < div id="page-link">{number}</div>
                     </li>
                 ))}
                 <li onClick={()=>handleInc()} className="symbol">{sym[1]}</li>
