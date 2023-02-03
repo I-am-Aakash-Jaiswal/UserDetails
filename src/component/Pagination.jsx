@@ -34,13 +34,13 @@ const Pagination = ({totalPosts,paginate,activePageNumber}) => {
     return (
         <nav>
             <ul className='pagination footer'>
-                <li onClick={()=>handleDec()}>{sym[0]}</li>
+                <li onClick={()=>handleDec()} className="symbol">{sym[0]}</li>
                 {pageNumbers.map(number=>(
                     <li key={number}  onClick={()=>handleClick(number)} className="page-item page active-page" id={active[number-1]}>
                             <a  href='!#' id="page-link">{number}</a>
                     </li>
                 ))}
-                <li onClick={()=>handleInc()}>{sym[1]}</li>
+                <li onClick={()=>handleInc()} className="symbol">{sym[1]}</li>
             </ul>
         </nav>
   )
