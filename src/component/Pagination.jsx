@@ -4,7 +4,7 @@ import { useState } from 'react';
 const Pagination = ({totalPosts,paginate,activePageNumber}) => {
   const pageNumbers = [];
     const sym=['<','>'];
-    var currActive=["","","",""];
+    var currActive=["active-page","","",""];
 
     const [active, setActive]=useState(currActive);
   for(let i = 1 ; i<= Math.ceil(totalPosts/3);i++){
