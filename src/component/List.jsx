@@ -45,7 +45,7 @@ function List() {
   return (
     <div className="list">
         <Container currentPosts={currentPosts}/>
-        <Pagination totalPosts={data.length} paginate={paginate} activePageNumber={activePageNumber}/>
+        <Pagination totalPosts={data.length} paginate={paginate} activePageNumber={currentPage}/>
     </div>
   )
 }

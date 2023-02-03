@@ -4,23 +4,43 @@ import { useState } from 'react';
 const Pagination = ({totalPosts,paginate,activePageNumber}) => {
   const pageNumbers = [];
     const sym=['<','>'];
-    const activePage= "active-page";
+    var currActive=["","","",""];
 
+    const [active, setActive]=useState(currActive);
   for(let i = 1 ; i<= Math.ceil(totalPosts/3);i++){
         pageNumbers.push(i);
   }
+
+  function handleClick(number){
+    console.log("HandleClickCAlled")
+    paginate(number);
+    currActive=["","","",""];
+    currActive[number-1]="active-page";
+    setActive(currActive);
+  }
+  function handleInc(){
+        if(activePageNumber< 4){
+        handleClick((Math.ceil(activePageNumber + 1)));
+        }
+  }
+  function handleDec(){
+        if(activePageNumber>1){
+      handleClick((Math.ceil(activePageNumber -1)));
+  }
+}
+
+
   
     return (
         <nav>
             <ul className='pagination footer'>
-                <li>{sym[0]}</li>
+                <li onClick={()=>handleDec()}>{sym[0]}</li>
                 {pageNumbers.map(number=>(
-
-                    <li key={number} className="page-item page">
-                            <a onClick={()=>paginate(number)} href='!#' id="page-link" className={activePage}>{number}</a>
+                    <li key={number}  onClick={()=>handleClick(number)} className="page-item page active-page" id={active[number-1]}>
+                            <a  href='!#' id="page-link">{number}</a>
                     </li>
                 ))}
-                <li>{sym[1]}</li>
+                <li onClick={()=>handleInc()}>{sym[1]}</li>
             </ul>
         </nav>
   )

@@ -87,6 +87,8 @@ body{
    padding: 10px;
    padding-top: 5px;
    padding-bottom: 5px;
+   margin: 0 10px;
+   border-radius: 7px;
 }
 .detailsButton{
  color: white;
@@ -152,6 +154,7 @@ li{
     list-style: none;
     cursor: pointer;
     text-decoration: none;
+    text-transform: none;
 }
 #page-link{
     cursor: pointer;
@@ -159,6 +162,6 @@ li{
     font-family: 'Nunito', sans-serif;
     color: black;
 }
-.active-page{
+#active-page{
     background-color: rgb(239, 43, 43);
 }
