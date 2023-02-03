@@ -1,6 +1,12 @@
-import React from 'react'
+import { createUnarySpacing } from '@mui/system';
+import React, { useState } from 'react'
 import "../style.css"
 function Card(props) {
+    const arr= ["View Details", "Hide Details"];
+    const [current,setCurrent] = useState(0)
+
+
+
     try{
         var city= props.users.address.city;
         var companyName= props.users.company.name;
@@ -19,11 +25,19 @@ function Card(props) {
 
     }
     
- 
+    function handClick(){
+        if(current==0){
+            setCurrent(1);
+        }
+        else
+        {
+            setCurrent(0);
+        }
+    }
 
    
   return (
-    <div className='card'>
+    <div className='card' onClick={handClick}>
         <div className="box">{companyName}</div>
         <div className="box">
             <div className="heading">Contact</div>
@@ -38,7 +52,7 @@ function Card(props) {
             <div className="subHeading">{street}</div>
         </div>
         <div className="box">
-            <button className=' detailsButton'>View Details</button>
+            <button className=' detailsButton'>{arr[current]}</button>
         </div>
     </div>
 
