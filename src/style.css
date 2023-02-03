@@ -153,6 +153,7 @@ body{
     box-shadow: none;
     padding: 0;
     cursor: auto;
+    z-index: 252525252;
 }
 .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
     cursor: auto;
@@ -201,4 +202,7 @@ li{
     border-radius: 10px;
     border: 0.5px solid rgb(248, 248, 248);
     transition: all 0.2s ease-in-out;
+}
+.css-67l5gl:last-of-type {
+    box-shadow: none;
 }
