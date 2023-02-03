@@ -13,7 +13,7 @@ export default function SimpleAccordion(props) {
 
   return (
     <div className='simpleAccordion'>
-      <Accordion>
+      <Accordion className='Acc'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
