@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import "../style.css"
 import Container from './Container'
-import Footer from './Footer'
+
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Pagination from './Pagination'
