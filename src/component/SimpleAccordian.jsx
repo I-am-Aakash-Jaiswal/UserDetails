@@ -9,7 +9,7 @@ import Description from './Description';
 import "../style.css"
 
 export default function SimpleAccordion(props) {
-  console.log(props.list[1].name)
+
 
   return (
     <div className='simpleAccordion'>

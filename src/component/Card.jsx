@@ -51,7 +51,7 @@ function Card(props) {
             <div className="heading">Street</div>
             <div className="subHeading">{street}</div>
         </div>
-        <div className="box">
+        <div className="box withButton">
             <button className=' detailsButton'>{arr[current]}</button>
         </div>
     </div>
