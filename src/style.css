@@ -83,6 +83,7 @@ body{
     justify-content: space-between;
     gap: 5px;
     align-items: flex-start;
+
 }
 .heading{
     font-weight: bold;
